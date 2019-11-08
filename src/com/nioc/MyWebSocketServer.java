@@ -34,7 +34,7 @@ public class MyWebSocketServer {
     {
         System.out.println(s.getId()+" is open, the msg:"+msg);
         try {
-            s.getBasicRemote().sendText("hello");
+            s.getBasicRemote().sendText("hello client");
         } catch (IOException e) {
             e.printStackTrace();
         }

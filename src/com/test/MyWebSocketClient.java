@@ -1,4 +1,4 @@
-package com.nioc;
+package com.test;
 
 import javax.websocket.*;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class MyWebSocketClient {
     Session session;
 
     public MyWebSocketClient(URI uri) {
-        WebSocketContainer container=ContainerProvider.getWebSocketContainer();
+        WebSocketContainer container= ContainerProvider.getWebSocketContainer();
         try {
             container.connectToServer(this, uri);
         } catch (DeploymentException e) {
@@ -29,6 +29,7 @@ public class MyWebSocketClient {
     {
         session=s;
         System.out.println(s.getId()+" is open");
+
     }
 
     @OnClose
@@ -45,12 +46,8 @@ public class MyWebSocketClient {
 
     @OnMessage
     public  void onMes(String msg, Session s) {
-        System.out.println(s.getId() + " is open, the msg:" + msg);
-        try {
-            s.getBasicRemote().sendText("hello");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println(s.getId() + " is open, the server response :" + msg);
+
     }
 
 }

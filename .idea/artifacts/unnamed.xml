@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="unnamed">
-    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
-    <root id="root">
-      <element id="module-output" name="testWebSocket" />
-      <element id="library" level="project" name="javax.websocket-api-1.0-rc4" />
-    </root>
-  </artifact>
-</component>
